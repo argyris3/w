@@ -1,7 +1,14 @@
-import React from "react";
+import ProjectList from "@/components/custom/dashboard/ProjectList";
+import WelcomeBanner from "@/components/custom/dashboard/WelcomeBanner";
 
 function DashboardPage() {
-  return <div>DashboardPage</div>;
+  return (
+    <div>
+      <WelcomeBanner />
+
+      <ProjectList />
+    </div>
+  );
 }
 
 export default DashboardPage;

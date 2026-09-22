@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import CreateNewBoardDialog from "./CreateNewBoardDialog";
 
 export function AppSidebar() {
   const path = usePathname();
@@ -36,8 +37,8 @@ export function AppSidebar() {
         </div>
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
-          <Button>+ Create new Board</Button>
+        <SidebarGroup className="w-full">
+          <CreateNewBoardDialog />
         </SidebarGroup>
         <SidebarGroup>
           <SidebarGroupLabel className="text-2xl mb-2">
@@ -75,7 +76,9 @@ export function AppSidebar() {
         </SidebarGroup>
 
         <SidebarFooter>
-          <Button>+ Create new Board</Button>
+          <Button className="w-full">
+            <CreateNewBoardDialog />
+          </Button>
           <div
             className="p-4 my-3 border
            rounded-md"

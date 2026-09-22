@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/nextjs";
 import { Sparkle } from "lucide-react";
 import React from "react";
+import CreateNewBoardDialog from "./CreateNewBoardDialog";
 
 function WelcomeBanner() {
   const { user } = useUser();
@@ -15,7 +16,9 @@ function WelcomeBanner() {
         <p>Τι θα φτιαξουμε μαστορα???</p>
 
         <div className="mt-5 flex items-center gap-3 ">
-          <Button size="lg">+ Παμε για δουλεια?</Button>
+          <Button size="lg">
+            <CreateNewBoardDialog />
+          </Button>
           <Button className="text-slate-700" size="lg" variant="outline">
             <Sparkle />
             Τα AI μωρε!!!

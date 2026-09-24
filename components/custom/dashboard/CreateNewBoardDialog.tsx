@@ -40,13 +40,15 @@ function CreateNewBoardDialog() {
       projectId: projectId,
     });
 
+    console.log(result?.data);
+
     toast.add({
       type: "success",
       title: "New Workspace Created...",
     });
     setLoading(false);
     setDialog(false);
-    route.push("/workspace" + projectId);
+    route.push("/workspace/" + projectId);
   };
 
   return (
